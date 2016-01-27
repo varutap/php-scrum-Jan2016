@@ -2,7 +2,7 @@
 <body>
 <ul>
 <li>
-<a id="repository-link" href="repository.html#readme">repository-link</a>
+<a id="repository-link" href="readme">repository-link</a>
 </li>
 </ul>
 
