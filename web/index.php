@@ -1,25 +1,7 @@
-<?php
-
-require('../vendor/autoload.php');
-
-$app = new Silex\Application();
-$app['debug'] = true;
-
-// Register the monolog logging service
-$app->register(new Silex\Provider\MonologServiceProvider(), array(
-  'monolog.logfile' => 'php://stderr',
-));
-
-// Register view rendering
-$app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/views',
-));
-
-// Our web handlers
-
-$app->get('/', function() use($app) {
-  $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('index.twig');
-});
-
-$app->run();
+<html>
+<body>
+<a id="repository-link" href="index.php#readme">https://github.com/varutap/php-scrum-Jan2016.git</a>
+<br />
+<a id="readme">YoseTheGame</a>
+</body>
+</html>
