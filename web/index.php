@@ -6,14 +6,14 @@
 </li>
 </ul>
 
-<a id="#contact-me-link" href="/contact">Contact Me</a>
+<a id="contact-me-link" href="/contact">Contact me</a>
 
 <br>
 <br>
 <br>
 <br>
 
-<h3><span class="glyphicon glyphicon-link"></span> Contact Me</h3>
+<h3><span class="glyphicon glyphicon-link"></span> Contact me</h3>
 <p>Please call me at XXX-XXXX</p>
 </body>
 </html>
