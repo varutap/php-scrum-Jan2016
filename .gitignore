@@ -1,2 +1,5 @@
 vendor/
 .env
+
+.idea/
+.idea/workspace.xml
