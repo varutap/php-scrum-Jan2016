@@ -1,18 +1,5 @@
-<script type="text/javascript">
-$(document).ready(function() {
-                  var vars = [], hash;
-                  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-                  for(var i = 0; i < hashes.length; i++)
-                  {
-                  hash = hashes[i].split('=');
-                  vars.push(hash[0]);
-                  vars[hash[0]] = hash[1];
-                  }
-                  
-                  });
-</script>
 <?php
-    $temp = vars['number'];
+    $temp = $_GET["number"];
     $cart = array();
 
     while($temp > 1) {
@@ -21,6 +8,6 @@ $(document).ready(function() {
         
     }
 
-    $json = array("number"=>vars['number'],"decomposition"=>$cart);
+    $json = array("number"=>$_GET["number"],"decomposition"=>$cart);
     header('Content-type: application/json');
     echo json_encode($json);
