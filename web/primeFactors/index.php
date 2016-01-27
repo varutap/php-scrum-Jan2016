@@ -10,7 +10,7 @@ $(document).ready(function() {
                   }
                   
                   });
-
+</script>
 <?php
     $temp = vars['number'];
     $cart = array();
