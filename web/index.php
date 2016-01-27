@@ -14,7 +14,7 @@
 .
 .
 
-<a name="contact-me-link"></a>
+<a id="contact-me-link">contact-me-link</a>
 
 <h3><span class="glyphicon glyphicon-link"></span> Contact Me</h3>
 <p>Please call me at XXX-XXXX</p>
