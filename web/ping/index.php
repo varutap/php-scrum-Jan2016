@@ -5,4 +5,4 @@ class ws {
 }
 
 $new_ws = new ws();
-echo json_encode(new_ws);
+echo json_encode($new_ws);
