@@ -4,10 +4,10 @@
 <li>
 <a id="repository-link" href="repository.html#readme">repository-link</a>
 </li>
-<li>
-<a id="#contact-me-link" href="/contact">Contact Me</a>
-</li>
 </ul>
+
+<a id="#contact-me-link" href="/contact">Contact Me</a>
+
 <br>
 <br>
 <br>
