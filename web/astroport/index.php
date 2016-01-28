@@ -54,6 +54,7 @@ $("#dock").click(function() {
 $("#ship").focusin(function() {
   $("#ship").val("");
   $("#info").addClass("hidden");
+  $("#gate-1").removeClass("occupied").addClass("free");
 });
 
 $("#gate-1").addClass("occupied");
