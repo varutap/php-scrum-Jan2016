@@ -9,11 +9,9 @@
         }
         return array($num);
     }
-    $numbea = $_SERVER['number'];
-    $numbeas = array_keys($numbea);
-    header('Content-type: application/json');
+    
+    $temp = $_GET["number"];
 
-    foreach($numbeas as $temp) {
     if(is_numeric($temp)) {
 //        $cart = array();
 //
@@ -33,8 +31,7 @@
             $json = array("number"=>$_GET["number"],"decomposition"=>$cart);
         }
     } else {
-
        $json = array("number"=>$_GET["number"],"error"=>"not a number");
     }
+    header('Content-type: application/json');
     echo json_encode($json);
-    }
