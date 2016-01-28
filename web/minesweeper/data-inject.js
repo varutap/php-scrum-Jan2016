@@ -1,15 +1,6 @@
 var arrayWidth = 8;
 var arrayHeight = 8;
-document.grid = [
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'bomb', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-];
+document.grid = [];
 
 function load() {
     for (var n = 1; n <= arrayWidth; n++) {
