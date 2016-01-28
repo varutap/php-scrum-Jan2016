@@ -1,13 +1,26 @@
 <?php
+    
+    function primefactor($num) {
+        $sqrt = sqrt($num);
+        for ($i = 2; $i <= $sqrt; $i++) {
+            if ($num % $i == 0) {
+                return array_merge(primefactor($num/$i), array($i));
+            }
+        }
+        return array($num);
+    }
+    
     $temp = $_GET["number"];
     if(is_numeric($temp)) {
-        $cart = array();
-
-        while($temp > 1) {
-            $temp = $temp / 2;
-            $cart[] = 2;
-            
-        }
+//        $cart = array();
+//
+//        while($temp > 1) {
+//            $temp = $temp / 2;
+//            $cart[] = 2;
+//            
+//        }
+        
+        $cart = primefactor($temp);
 
         $json = array("number"=>$_GET["number"],"decomposition"=>$cart);
     } else {
