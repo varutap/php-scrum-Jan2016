@@ -17,7 +17,7 @@
 </div>
 <br />
 <div>
-  <div>Ship</div><input id="ship" type="text" /><input id="dock" type="button" value="dock" />
+  <div>Ship</div><input id="ship" type="text" /><button id="dock">dock</button>
 </div>
 
 <script>
