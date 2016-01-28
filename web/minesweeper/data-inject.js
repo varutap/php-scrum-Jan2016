@@ -13,8 +13,13 @@ function load() {
         for (var p = 1; p <= arrayHeight; p++) {
             var id = "cell-" + n + "x" + p;
             if (randomWidth == n && randomHeight == p) {
-                var childAppend = "<td id='" + id + "' class='lost'>bomb</td>";
-                $("#" + rowId).append(childAppend);
+                var childAppend = "<td id='" + id + "'><a href='#'>bomb</a></td>";
+                var element = $("#" + rowId);
+                element.append(childAppend);
+                var childElement = $("#" + id);
+                element.click(function () {
+                    childElement.addClass("lost");
+                });
             }
             else {
                 var childAppend = "<td id='" + id + "'>empty</td>";
