@@ -2,12 +2,16 @@
 <body>
 <ul>
 <li>
-<a id="repository-link" href="/readme">repository-link</a>
+<a id="contact-me-link" href="/contact">Contact me</a>
+</li>
+<li>
+<a id="repository-link" href="readme.html">repository-link</a>
+</li>
+<li>
+<a id="ping-challenge-link" href="./ping">ping-challenge-link</a>
 </li>
 </ul>
 
-<a id="contact-me-link" href="/contact">Contact me</a>
-<a id="ping-challenge-link" href="/ping">ping-challenge-link</a>
 
 <br>
 <br>
