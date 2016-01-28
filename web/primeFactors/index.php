@@ -20,10 +20,15 @@
 //            
 //        }
         
-        $cart = primefactor($temp);
-        $cart = array_reverse($cart);
+        if($temp > 1000000) {
+            $json = array("number"=>$_GET["number"],"error"=>"too big number (>1e6)");    
+        } else {
+        
+            $cart = primefactor($temp);
+            $cart = array_reverse($cart);
 
-        $json = array("number"=>$_GET["number"],"decomposition"=>$cart);
+            $json = array("number"=>$_GET["number"],"decomposition"=>$cart);
+        }
     } else {
        $json = array("number"=>$_GET["number"],"error"=>"not a number");
     }
