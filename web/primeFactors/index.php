@@ -21,6 +21,7 @@
 //        }
         
         $cart = primefactor($temp);
+        $cart = array_reverse($cart);
 
         $json = array("number"=>$_GET["number"],"decomposition"=>$cart);
     } else {
