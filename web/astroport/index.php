@@ -57,7 +57,7 @@ $("#ship").focusin(function() {
   $("#gate-1").removeClass("occupied").addClass("free");
 });
 
-$("#gate-1").addClass("occupied");
+$("#gate-1").addClass("free");
 $("#gate-2").addClass("free");
 $("#gate-3").addClass("free");
 
