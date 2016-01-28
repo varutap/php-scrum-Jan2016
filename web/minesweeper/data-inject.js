@@ -6,11 +6,15 @@ var bombWidth = -1;
 var bombHeight = -1;
 
 function load() {
-  
+
 };
 
 function clickCell(element) {
-    element.addClass("lost");
+    var elementId = element.getAttribute("id");
+    console.log(elementId);
+    $("#" + elementId).addClass("lost");
+
+    findBombPosition(elementId);
 };
 
 function createGrid() {
@@ -24,20 +28,22 @@ function createGrid() {
         $("#minesweeper").append("<tr id='" + rowId + "'></td>");
         for (var p = 1; p <= arrayHeight; p++) {
             var id = "cell-" + n + "x" + p;
-            if (randomWidth == bombWidth && randomHeight == bombHeight) {
-                var element = $("#" + rowId);
-                var childAppend = "<td id='" + id + "' onclick='clickCell(this);'>empty</td>";
-                element.append(childAppend);
-            }
-            else {
-                var childAppend = "<td id='" + id + ">empty</td>";
-                $("#" + rowId).append(childAppend);
-            }
+            //if (randomWidth == bombWidth && randomHeight == bombHeight) {
+            var element = $("#" + rowId);
+            var childAppend = "<td id='" + id + "' onclick='clickCell(this);'>empty</td>";
+            element.append(childAppend);
+            //}
+            //else {
+            //    var childAppend = "<td id='" + id + ">empty</td>";
+            //    $("#" + rowId).append(childAppend);
+            //}
         }
     }
 };
 
-function setBombPosition() {
+function findBombPosition(elementId) {
+    var colAndRow = parseElementId(elementId);
+
     for (var n = 1; n <= arrayWidth; n++) {
         for (var p = 1; p <= arrayHeight; p++) {
             if (document.grid[n - 1][p - 1] === "bomb") {
@@ -49,8 +55,15 @@ function setBombPosition() {
     }
 };
 
+function parseElementId(elementId){
+    var colAndRow = [];
+
+    // do the logic to find the row and column number
+
+    return colAndRow;
+}
+
 $(document).ready(function () {
     load();
-    setBombPosition();
     createGrid();
 });
