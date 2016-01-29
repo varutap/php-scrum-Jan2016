@@ -31,9 +31,8 @@
 <h2 id="invitation">Sup</h2>
 <form action="" method="post" id="form1">
 <input type="text" id="number" name="number">
-<input type="submit" name="SubmitButton"/>
+<button type="submit" id="go" value="Go" name="SubmitButton">Go</button>
 </form>
-<button type="button" id="go" value="Go" form="form1">Go</button>
 <p id="result"><?php echo $string;?></p>
 </body>
 </html>
