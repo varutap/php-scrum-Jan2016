@@ -53,6 +53,7 @@ if (strlen($map) == ($width * $width)) {
   $all_move = array_merge($move1, $move2);
   //print_r($all_move);
 
+  header('Content-type: application/json');
   echo json_encode($all_move);
 
 }
