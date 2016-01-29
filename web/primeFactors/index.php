@@ -13,7 +13,6 @@
     $qs = preg_replace("/(?<=^|&)(\w+)(?==)/", "$1[]", $_SERVER["QUERY_STRING"]);
     parse_str($qs, $new_GET);
     $jsons = array();
-    echo "hello";
     for($j = 0; $j < count($new_GET['number']); $j++) {
         $temp = $new_GET['number'][$j];
         if(is_numeric($temp)) {
