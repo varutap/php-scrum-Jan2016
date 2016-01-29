@@ -38,7 +38,22 @@ function findDirection($fromRow, $fromCol, $toRow, $toCol) {
    return $directions;
 }
 
+function getMaps($map, $width) {
+  $maps = array();
+  //$r = ceil(strlen($map)/$width);
+  for ($i = 0; $i < strlen($map); $i+=3) {
+     $ss = substr($map, $i, 3);
+     $maps[] = $ss;
+  } 
+  return $maps;
+}
+
+class response {
+  var $map;
+  var $moves;
+}
 if (strlen($map) == ($width * $width)) {
+  
 
   $p_row = findRow($map, $width, "p");
   $p_column = findColumn($map, $width, "p");
@@ -54,7 +69,13 @@ if (strlen($map) == ($width * $width)) {
   //print_r($all_move);
 
   header('Content-type: application/json');
-  echo json_encode($all_move);
+
+  $maps = getMaps($map, $width);
+  $response = new response();
+  $response->map = $maps;
+  $response->moves = $all_move;
+
+  echo json_encode($response);
 
 }
 
