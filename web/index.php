@@ -11,6 +11,9 @@ Hello Yose
 <li>
 <a id="ping-challenge-link" href="http://sheltered-peak-44185.herokuapp.com/ping">ping-challenge-link</a>
 </li>
+<li>
+<a id="astroport-link" href="/astroport">astroport link</a>
+</li>
 </ul>
 
 
