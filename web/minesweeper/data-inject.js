@@ -12,13 +12,34 @@ function load() {
                     $(this).addClass("lost");
                     $(this).text("bomb");
                 });
-            } else{
+            } else {
                 element.click(function () {
+                    var totalBomb = 0;
+                    totalBomb += totalBombLeft(n, p);
+                    totalBomb += totalBombAbove(n, p);
+                    totalBomb += totalBombBelow(n, p);
+                    totalBomb += totalBombRight(n, p);
                     $(this).addClass("safe");
-                    $(this).text("1");
+                    $(this).text(totalBomb);
                 });
             }
         }
     }
+};
+
+function totalBombLeft(n, p) {
+    return n - 1 > 0 ? 1 : 0;
+};
+
+function totalBombAbove(n, p) {
+    return p - 1 > 0 ? 1 : 0;
+};
+
+function totalBombBelow(n, p) {
+    return p + 1 < arrayHeight ? 1 : 0;
+};
+
+function totalBombRight(n, p) {
+    return n + 1 < arrayWidth ? 1 : 0;
 };
 
