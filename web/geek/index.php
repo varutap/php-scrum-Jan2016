@@ -14,8 +14,8 @@ function findColumn($map, $width, $type) {
 }
 
 class direction {
-  var $dX = 0;
-  var $dY = 0;
+  var $dx = 0;
+  var $dy = 0;
 }
 
 function findDirection($fromRow, $fromCol, $toRow, $toCol) {
@@ -25,14 +25,14 @@ function findDirection($fromRow, $fromCol, $toRow, $toCol) {
    $directions = array();
    for ($i = 0; $i < $dY; $i++) {
      $direction = new direction();
-     $direction->dX = 0;
-     $direction->dY = 1;
+     $direction->dx = 0;
+     $direction->dy = 1;
      $directions[] = $direction;
    }
    for ($i = 0; $i < $dX; $i++) {
      $direction = new direction();
-     $direction->dX = 1;
-     $direction->dY = 0;
+     $direction->dx = 1;
+     $direction->dy = 0;
      $directions[] = $direction;
    }
    return $directions;
